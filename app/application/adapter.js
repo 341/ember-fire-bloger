@@ -1,8 +1,8 @@
 import FirebaseAdapter from 'emberfire/adapters/firebase';
-import RESTAdapter from 'ember-data/adapters/json-api';
+import JSONAPIAdapter from 'ember-data/adapters/json-api';
 import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
 
-export default FirebaseAdapter.extend(DataAdapterMixin, RESTAdapter, {
+export default FirebaseAdapter.extend(DataAdapterMixin, JSONAPIAdapter, {
 });
 
 
