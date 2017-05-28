@@ -16,6 +16,5 @@
 npm-debug.log*
 testem.log
 
+.ide
 .idea
-config/.env
-.DS_Store

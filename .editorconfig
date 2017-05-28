@@ -18,7 +18,3 @@ insert_final_newline = false
 
 [*.{diff,md}]
 trim_trailing_whitespace = false
-
-.idea
-config/.env
-.DS_Store

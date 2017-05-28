@@ -1,4 +1,4 @@
-/* jshint node: true */
+/* eslint-env node */
 
 module.exports = function (environment) {
     var ENV = {
@@ -16,18 +16,22 @@ module.exports = function (environment) {
                 Date: false
             }
         },
+        // torii: {
+        //     sessionServiceName: 'session',
+        //     providers: {
+        //         'firebase-simple-auth': {
+        //         }
+        //     }
+        // },
+        'ember-simple-auth': {
+            authenticationRoute: 'sessions',
+            routeAfterAuthentication: 'posts'
+        },
         firebase: {
             apiKey: 'AIzaSyDUWYPwztvoqdZejVUXinmgd_5tyIpLwEA',
             authDomain: 'car-checkin.firebaseapp.com',
             databaseURL: 'https://car-checkin.firebaseio.com',
-            storageBucket: 'car-checkin.appspot.com',
-        },
-        //firebase: 'https://car-checkin.firebaseio.com/',
-        torii: {
-            sessionServiceName: 'session',
-            providers: {
-                'firebase-simple-auth': {}
-            }
+            storageBucket: 'car-checkin.appspot.com'
         },
         contentSecurityPolicy: {
             'script-src': "'self' 'unsafe-eval' apis.google.com",
@@ -35,11 +39,6 @@ module.exports = function (environment) {
             'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
         },
 
-
-        'ember-simple-auth': {
-            authenticationRoute: 'sessions',
-            routeAfterAuthentication: 'posts'
-        },
 
         APP: {
             // Here you can pass flags/options to your application instance
